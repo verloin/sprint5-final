@@ -60,7 +60,7 @@ func (ds DaySteps) ActionInfo() (string, error) {
 	// вычисляем количество сожжённых калорий и обрабатываем ошибки
 	calories, err := spentenergy.WalkingSpentCalories(ds.Steps, float64(ds.Weight), float64(ds.Height), ds.Duration)
 	if err != nil {
-		return "", fmt.Errorf("TraiDayStepsning: ActionInfo: failed to convert steps: %w", err)
+		return "", fmt.Errorf("DaySteps: ActionInfo: failed to convert steps: %w", err)
 	}
 	// формируем и возвращаем строку с информацией
 	return fmt.Sprintf("Количество шагов: %d.\nДистанция составила %.2f км.\nВы сожгли %.2f ккал.\n", ds.Steps, distance, calories), nil

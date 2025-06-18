@@ -17,10 +17,10 @@ const (
 func WalkingSpentCalories(steps int, weight, height float64, duration time.Duration) (float64, error) {
 	// TODO: реализовать функцию
 	// проверяем входные параметры на корректность
-	if steps <= 0 { return 0, errors.New("RunningSpentCalories: the number of steps must be greater than 0") }
-	if weight <= 0 { return 0, errors.New("RunningSpentCalories: the weight must be greater than 0") }
-	if height <= 0 { return 0, errors.New("RunningSpentCalories: the height must be greater than 0") }
-	if duration <= 0 { return 0, errors.New("RunningSpentCalories: the duration must be greater than 0") }
+	if steps <= 0 { return 0, errors.New("spentenergy: RunningSpentCalories: the number of steps must be greater than 0") }
+	if weight <= 0 { return 0, errors.New("spentenergy: RunningSpentCalories: the weight must be greater than 0") }
+	if height <= 0 { return 0, errors.New("spentenergy: RunningSpentCalories: the height must be greater than 0") }
+	if duration <= 0 { return 0, errors.New("spentenergy: RunningSpentCalories: the duration must be greater than 0") }
 	// рассчитываем среднюю скорость
 	meanSpeed := MeanSpeed(steps, height, duration)
 	// переводим продолжительность в минуты 
@@ -35,10 +35,10 @@ func WalkingSpentCalories(steps int, weight, height float64, duration time.Durat
 func RunningSpentCalories(steps int, weight, height float64, duration time.Duration) (float64, error) {
 	// TODO: реализовать функцию
 	// Проверяем входные параметры на корректность
-	if steps <= 0 { return 0, errors.New("RunningSpentCalories: the number of steps must be greater than 0") }
-	if weight <= 0 { return 0, errors.New("RunningSpentCalories: the weight must be greater than 0") }
-	if height <= 0 { return 0, errors.New("RunningSpentCalories: the height must be greater than 0") }
-	if duration <= 0 { return 0, errors.New("RunningSpentCalories: the duration must be greater than 0") }
+	if steps <= 0 { return 0, errors.New("spentenergy: RunningSpentCalories: the number of steps must be greater than 0") }
+	if weight <= 0 { return 0, errors.New("spentenergy: RunningSpentCalories: the weight must be greater than 0") }
+	if height <= 0 { return 0, errors.New("spentenergy: RunningSpentCalories: the height must be greater than 0") }
+	if duration <= 0 { return 0, errors.New("spentenergy: RunningSpentCalories: the duration must be greater than 0") }
 	// рассчитаем среднюю скорость
 	meanSpeed := MeanSpeed(steps, height, duration)
 	// переводим продолжительность в минуты 
